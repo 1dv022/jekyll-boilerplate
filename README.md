@@ -26,7 +26,7 @@ Now, do:
 
 3. SSH into the machine using  `vagrant ssh` (Now you are connected to the virtual machine. Every command is now executed in the virtual mashine. If you do `exit` you leave the virtual machine and are back on your local computer.)
 
-4. Install depencies and github-pages `npm install` (if you are on Windows use the command `npm install --no-bin-links`). It will now install some packages and it could take a while.
+4. Install bundler with `gem install bundler`. Then install decencies and github-pages `npm install` (if you are on Windows use the command `npm install --no-bin-links`). It will now install some packages and it could take a while.
 
 5. Create an scaffolded jekyll project using `jekyll new src` (`src` to install in the directory (`/vagrant/src`)
 
