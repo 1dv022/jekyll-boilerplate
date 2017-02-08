@@ -1,8 +1,8 @@
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "hashicorp/precise32"
-  
   # Jekyll github-pages port
+  config.vm.box = "ubuntu/trusty32"
+
   config.vm.network "forwarded_port", guest: 4000, host: 4000
 
   config.vm.provision "fix-no-tty", type: "shell" do |s|
