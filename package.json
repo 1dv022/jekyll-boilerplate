@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start": "docker run --rm --volume=$PWD:/srv/jekyll --volume=$PWD/vendor/bundle:/usr/local/bundle -p 35729:35729 -p 4000:4000 -it jekyll/builder jekyll serve",
-    "update": "docker run --rm --volume=$PWD:/srv/jekyll --volume=$PWD/vendor/bundle:/usr/local/bundle -it jekyll/builder jekyll update",
+    "build": "docker run --rm --volume=$PWD:/srv/jekyll --volume=$PWD/vendor/bundle:/usr/local/bundle -it jekyll/builder jekyll build",
     "postinstall": "docker run --rm --volume=$PWD:/srv/jekyll --volume=$PWD/vendor/bundle:/usr/local/bundle -it jekyll/builder jekyll new . --force"
   }
 }
