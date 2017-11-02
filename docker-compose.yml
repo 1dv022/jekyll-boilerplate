@@ -3,7 +3,7 @@ services:
   site:
     image: jekyll/builder
     volumes:
-      - .:/srv/jekyll
+      - ./src:/srv/jekyll
       - ./vendor/bundle:/usr/local/bundle
     ports:
       - 4000:4000

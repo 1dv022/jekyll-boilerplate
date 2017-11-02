@@ -30,8 +30,8 @@
     "node": ">=7.0.0"
   },
   "scripts": {
-    "start": "docker-compose run --service-ports site jekyll serve",
+    "start": "docker-compose run --service-ports site jekyll serve --force_polling",
     "update": "docker-compose run site jekyll update",
-    "postinstall": "docker-compose run site jekyll new . --force"
+    "postinstall": "docker-compose run site jekyll new ."
   }
 }
