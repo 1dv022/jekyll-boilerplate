@@ -2,6 +2,7 @@
   "name": "@1dv022/jekyll-boilerplate",
   "version": "1.0.0",
   "homepage": "https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/",
+  "description": "A simple gettingstarted with Jekyll, Github-pages using Docker",
   "contributors": [
     {
       "name": "Johan Leitet",
@@ -28,16 +29,9 @@
   "engines": {
     "node": ">=7.0.0"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "nodemon": "^1.7.3"
-  },
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "mocha --recursive ./test",
-    "postinstall": "bundle install",
-    "watch":"bundle exec jekyll serve --host=0.0.0.0 --source ./src --force_polling"
+    "start": "docker run --rm --volume=$PWD:/srv/jekyll --volume=$PWD/vendor/bundle:/usr/local/bundle -it jekyll/builder jekyll serve",
+    "update": "docker run --rm --volume=$PWD:/srv/jekyll --volume=$PWD/vendor/bundle:/usr/local/bundle -it jekyll/builder jekyll update",
+    "postinstall": "docker run --rm --volume=$PWD:/srv/jekyll --volume=$PWD/vendor/bundle:/usr/local/bundle -it jekyll/builder jekyll new . --force"
   }
 }
