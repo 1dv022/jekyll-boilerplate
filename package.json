@@ -30,8 +30,8 @@
     "node": ">=7.0.0"
   },
   "scripts": {
-    "start": "docker run --rm --volume=$PWD:/srv/jekyll --volume=$PWD/vendor/bundle:/usr/local/bundle -p 35729:35729 -p 4000:4000 -it jekyll/builder jekyll serve",
-    "build": "docker run --rm --volume=$PWD:/srv/jekyll --volume=$PWD/vendor/bundle:/usr/local/bundle -it jekyll/builder jekyll build",
-    "postinstall": "docker run --rm --volume=$PWD:/srv/jekyll --volume=$PWD/vendor/bundle:/usr/local/bundle -it jekyll/builder jekyll new . --force"
+    "start": "docker-compose run --service-ports site jekyll serve",
+    "update": "docker-compose run site jekyll update",
+    "postinstall": "docker-compose run site jekyll new . --force"
   }
 }
